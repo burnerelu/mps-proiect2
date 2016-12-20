@@ -22,7 +22,7 @@ class ImageCreator:
         self.base_image = self.createBaseImage(text, int(difficulty))
         base_draw = ImageDraw.Draw(self.base_image)
         self.plantText(text, int(difficulty))
-        self.base_image.save("piccc.png")
+        self.base_image.save("current-img.png")
 
     def load_fonts(self):
         self.fonts['0'] = ImageFont.truetype("/usr/share/fonts/OTF/C059-Roman.otf", 50)
