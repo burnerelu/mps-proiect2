@@ -1,4 +1,3 @@
-#!/usr/bin/python2.7
 import PIL
 from PIL import ImageFont
 from PIL import Image
@@ -53,21 +52,15 @@ class ImageCreator:
             self.g = random.randint(40, 255)
             self.b = random.randint(40, 255)
             self.rotate = random.randint(10, 60)
-<<<<<<< HEAD
             image = Image.new('RGBA', (self.width + 30, int(self.height + self.width * self.rotate * 0.02 + 20)), (self.r, self.g, self.b))
-=======
             image = Image.new('RGBA', (self.width + 30, int(self.height + self.width * self.rotate * 0.02)), (self.r, self.g, self.b))
->>>>>>> 729b79eb9de8ac0ab408bc8baa9f01db5fea970c
 
         return image
 
     def plantText(self, text, difficulty):
         width, height = self.fonts[str(difficulty)].getsize(text)
-<<<<<<< HEAD
         self.text_image = Image.new('RGBA', (width + 30, height + 30), (255, 255, 255, 0))
-=======
         self.text_image = Image.new('RGBA', (width, height), (255, 255, 255, 0))
->>>>>>> 729b79eb9de8ac0ab408bc8baa9f01db5fea970c
         draw = ImageDraw.Draw(self.text_image)
         if difficulty == 0:
             draw.text((0,0), text=text, font=self.fonts[str(difficulty)], fill=(0, 0, 0))
